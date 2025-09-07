@@ -1,0 +1,74 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.content-area {
+  flex: 1;
+  min-height: 100vh;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  overflow-x: hidden;
+}
+
+.content-area.desktop {
+  margin-left: 280px;
+  padding: 20px 30px;
+}
+
+.content-area.mobile {
+  margin-left: 0;
+  padding: 80px 20px 20px 20px;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .content-area {
+    margin-left: 280px;
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .content-area.mobile {
+    padding: 80px 25px 20px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .content-area.mobile {
+    padding: 80px 15px 15px 15px;
+  }
+}
+
+.content-area > * {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content-area::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.content-area::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.content-area::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

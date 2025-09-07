@@ -1,0 +1,339 @@
+.AdminDocumentDetailModal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.AdminDocumentDetailModal .AdminModalHeader {
+  padding: 24px;
+  border-bottom: 2px solid #f1f3f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.AdminDocumentDetailModal .AdminModalHeader h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.AdminDocumentDetailModal .AdminModalContent {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.AdminDocumentInfoSection {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #f1f3f4;
+}
+
+.AdminDocumentPreviewSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AdminPreviewImageLarge {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #dee2e6;
+}
+
+.AdminNoPreviewLarge {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  font-size: 48px;
+  color: #6c757d;
+}
+
+.AdminDocumentDetails h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.AdminDetailGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.AdminDetailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.AdminDetailItem label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 14px;
+}
+
+.AdminDetailItem span {
+  color: #333;
+  font-size: 14px;
+}
+
+.AdminCategoryBadge {
+  background: #e9ecef;
+  color: #495057;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.AdminStatusBadge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.AdminStatusBadge.AdminActive {
+  background: #d4edda;
+  color: #155724;
+}
+
+.AdminStatusBadge.AdminInactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.AdminSlugText {
+  font-family: 'Courier New', monospace;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.AdminDescriptionSection {
+  margin-bottom: 20px;
+}
+
+.AdminDescriptionSection label {
+  display: block;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+.AdminDescriptionText {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+.AdminUrlSection {
+  margin-bottom: 20px;
+}
+
+.AdminUrlSection label {
+  display: block;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+.AdminExternalLink {
+  color: #007bff;
+  text-decoration: none;
+  padding: 8px 12px;
+  background: #e3f2fd;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.AdminExternalLink:hover {
+  background: #bbdefb;
+  color: #0056b3;
+}
+
+.AdminActionSection {
+  margin-top: 20px;
+}
+
+.AdminRelatedContentSection {
+  border-top: 2px solid #f1f3f4;
+  padding-top: 30px;
+}
+
+.AdminRelatedContentSection h4 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.AdminRelatedContentSection h5 {
+  margin: 0 0 12px 0;
+  color: #495057;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.AdminRelatedProducts,
+.AdminRelatedPages {
+  margin-bottom: 24px;
+}
+
+.AdminLoadingRelated {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.AdminRelatedList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.AdminRelatedItem {
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AdminItemName {
+  font-weight: 600;
+  color: #333;
+}
+
+.AdminItemSlug {
+  font-family: 'Courier New', monospace;
+  background: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.AdminNoRelated {
+  color: #6c757d;
+  font-style: italic;
+  margin: 0;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.AdminDocumentDetailModal .AdminModalActions {
+  padding: 20px 24px;
+  background: #f8f9fa;
+  border-top: 2px solid #f1f3f4;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.AdminCloseModalBtn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.AdminCloseModalBtn:hover {
+  background: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .AdminDocumentDetailModal {
+    max-width: 100%;
+    max-height: 95vh;
+    margin: 10px;
+  }
+
+  .AdminDocumentDetailModal .AdminModalContent {
+    padding: 16px;
+  }
+
+  .AdminDocumentInfoSection {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .AdminDocumentPreviewSection {
+    order: -1;
+  }
+
+  .AdminDetailGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .AdminRelatedItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .AdminDocumentDetailModal .AdminModalHeader {
+    padding: 16px;
+  }
+
+  .AdminDocumentDetailModal .AdminModalHeader h2 {
+    font-size: 20px;
+  }
+
+  .AdminDocumentDetailModal .AdminModalContent {
+    padding: 12px;
+  }
+
+  .AdminDocumentDetails h3 {
+    font-size: 20px;
+  }
+
+  .AdminDownloadBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

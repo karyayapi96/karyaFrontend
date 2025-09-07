@@ -1,0 +1,142 @@
+.info-container {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.info-content {
+  display: flex;
+
+  justify-content: space-evenly;
+  width: 100%;
+  font-family: Montserrat;
+}
+
+@media (max-width: 768px) {
+  .info-content {
+    gap: 2rem;
+  }
+}
+
+.info-image-container {
+  background: radial-gradient(
+    97.57% 210.75% at 0.9% 2.98%,
+    rgba(199, 199, 199, 0.8) 0%,
+    rgba(199, 199, 199, 0.1) 100%
+  );
+  width: 35%;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.info-image img {
+  width: 100%;
+
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.info-text {
+  max-width: 610px;
+
+  text-align: left;
+}
+
+.info-text .about-title {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.line {
+  width: 148px;
+  height: 4px;
+
+  background-color: #ff6600;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.info-text .about-subtitle {
+  margin-bottom: 1.125rem;
+  font-weight: 700;
+}
+
+.info-text p {
+  color: #555;
+  line-height: 25px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .info-content {
+    flex-direction: column;
+    width: 100%;
+    align-items: left;
+    padding: 1rem;
+  }
+
+  .info-container {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+  .info-image-container {
+    width: 100%;
+
+    margin-bottom: 1rem;
+  }
+
+  .info-image img {
+    width: 100%;
+    padding: 1rem;
+    height: 20%;
+  }
+
+  .info-text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .info-text .about-title {
+    font-size: 1.5rem;
+  }
+
+  .info-text p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .info-content {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .info-image-container {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .info-image img {
+    width: 100%;
+  }
+
+  .info-text {
+    max-width: 50%;
+    text-align: left;
+  }
+
+  .info-text .about-title {
+    font-size: 1.5rem;
+  }
+
+  .info-text p {
+    font-size: 0.875rem;
+  }
+}

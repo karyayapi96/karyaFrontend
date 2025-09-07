@@ -1,0 +1,866 @@
+.AdminPanel {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.AdminPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+.AdminPanelTitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+.AdminProductsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.AdminProductCard {
+  background: transparent;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 450px;
+}
+
+.AdminProductCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.AdminProductImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+}
+
+.AdminProductImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  background: transparent;
+}
+
+.AdminProductImage img[src*=".png"] {
+  object-fit: contain;
+  background: transparent;
+}
+
+.AdminProductCard:hover .AdminProductImage img {
+  transform: scale(1.05);
+}
+
+.AdminNoImage {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.AdminProductInfo {
+  padding: 20px;
+  background: transparent;
+
+  flex: 1 1 auto;
+}
+
+.AdminProductName {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.AdminProductTitle {
+  font-size: 18px !important;
+  color: #333 !important;
+  margin: 0.5rem 0 !important;
+  font-weight: 600;
+}
+
+.AdminProductDescription {
+  font-size: 18px;
+  color: #666;
+  margin: 1rem 0 !important;
+  line-height: 1.5;
+}
+
+/* Subtitle styles */
+.AdminProductSubtitles {
+  font-size: 18px !important;
+  margin: 0.5rem 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.AdminProductSubtitle {
+  background: transparent;
+  color: #4a5568;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline;
+  font-size: 16px !important;
+}
+
+.AdminMoreSubtitles {
+  background: transparent;
+  color: #2d3748;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-style: italic;
+  display: inline;
+}
+
+.AdminProductListItems {
+  margin: 12px 0 0 0;
+}
+
+.AdminProductListItems h5 {
+  margin: 0 0 6px 0;
+  font-size: 0.85rem;
+  color: #4a5568;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.AdminProductListItems ul {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.AdminProductListItems li {
+  margin: 2px 0;
+  line-height: 1.4;
+}
+
+.AdminMoreItems {
+  font-style: italic;
+  color: #a0aec0 !important;
+}
+.AdminProductActions {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+.AdminNoProducts {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  grid-column: 1 / -1;
+}
+
+.AdminNoProducts p {
+  font-size: 18px;
+  margin: 0;
+}
+.AdminLoading {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  color: #666;
+}
+.AdminPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+.AdminPaginationBtn {
+  background: #f68b1f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.AdminPaginationBtn:hover:not(:disabled) {
+  background: #ee5c30;
+  transform: translateY(-1px);
+}
+
+.AdminPaginationBtn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.AdminPaginationInfo {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+.AdminModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.AdminModalContent {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.AdminProductModal {
+  width: 1200px;
+}
+
+.AdminDeleteModal {
+  width: 400px;
+}
+
+.AdminModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 2px solid #f0f0f0;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.AdminModalHeader h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.AdminCloseBtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.AdminCloseBtn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+.AdminModalForm {
+  padding: 25px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.AdminModalBody {
+  padding: 25px;
+  text-align: center;
+}
+
+.AdminWarningIcon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.AdminWarningText {
+  color: #dc3545;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.AdminFormGroup {
+  margin-bottom: 25px;
+}
+
+.AdminFormGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.AdminFormGroup input,
+.AdminFormGroup textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.AdminFormGroup input:focus,
+.AdminFormGroup textarea:focus {
+  outline: none;
+  border-color: #f68b1f;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.AdminInputGroup {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.AdminInputGroup input,
+.AdminInputGroup textarea {
+  flex: 1;
+}
+
+.AdminRemoveBtn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  min-width: 35px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.AdminRemoveBtn:hover {
+  background: #c82333;
+}
+
+.AdminRemoveBtn.danger {
+  background: #dc3545;
+}
+
+.AdminRemoveBtn.danger:hover {
+  background: #c82333;
+}
+
+.add-btn {
+  background: #f68b1f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-btn:hover {
+  background: #ee5c30;
+}
+
+.add-btn.secondary {
+  background: #6c757d;
+}
+
+.add-btn.secondary:hover {
+  background: #545b62;
+}
+
+.AdminFileInput {
+  margin-bottom: 15px;
+}
+
+.AdminImagePreviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.AdminImagePreviewItem {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #e9ecef;
+}
+
+.AdminImagePreviewItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.AdminRemoveImageBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(220, 53, 69, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.AdminRemoveImageBtn:hover {
+  background: rgba(200, 35, 51, 1);
+}
+
+.AdminRemoveImageBtn.danger {
+  background: rgba(220, 53, 69, 0.9);
+}
+
+.AdminRemoveImageBtn.danger:hover {
+  background: rgba(200, 35, 51, 1);
+}
+
+.AdminModalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 20px 25px;
+  border-top: 2px solid #f0f0f0;
+  background: #f8f9fa;
+}
+
+.AdminDeleteBtn.danger {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+.AdminDeleteBtn.danger:hover {
+  background: linear-gradient(135deg, #c82333, #a71e2a);
+}
+
+@media (max-width: 768px) {
+  .AdminPanel {
+    padding: 15px;
+  }
+
+  .AdminPanelHeader {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .AdminProductsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .AdminProductModal {
+    width: 95vw;
+  }
+
+  .AdminDeleteModal {
+    width: 95vw;
+    max-width: 400px;
+  }
+
+  .AdminModalForm {
+    max-height: 60vh;
+  }
+
+  .AdminImagePreviewGrid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .AdminImagePreviewItem {
+    width: 80px;
+    height: 80px;
+  }
+
+  .AdminPagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.AdminBannerImageInput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.AdminBannerImageControls {
+  display: flex;
+  gap: 10px;
+}
+
+.file-select-btn {
+  background: #f68b1f;
+  color: white !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.file-select-btn:hover {
+  background: #ee5c30;
+}
+
+.file-select-btn.primary {
+  background: #f68b1f;
+}
+
+.file-select-btn.primary:hover {
+  background: #ee5c30;
+}
+
+.AdminBannerPreview {
+  margin-top: 10px;
+}
+
+.AdminImageUploadControls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.AdminUploadControls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.AdminSelectedFiles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.AdminSelectedFileItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+}
+
+.AdminFileIcon {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.product-image-selector,
+.document-images-selector,
+.product-detail-images-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selected-file-info,
+.selected-image-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  align-items: center;
+  padding: 8px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+}
+
+.selected-images {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.AdminFileSelectorModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.AdminFileSelectorContent.modern {
+  background: #fff;
+  border-radius: 18px;
+  width: 95%;
+  max-width: 900px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(246, 139, 31, 0.12);
+  border: 1.5px solid #f68b1f;
+}
+
+.AdminFileSelectorHeader.modern {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px 16px 32px;
+  border-bottom: 2px solid #f68b1f;
+  background: linear-gradient(135deg, #fff7ed, #f8f9fa);
+}
+
+.AdminFileSelectorHeader h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.AdminFileSelectorBody.modern {
+  padding: 24px 32px;
+  overflow-y: auto;
+}
+
+.AdminFilesGrid.modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.AdminFileItem.modern {
+  border: 1.5px solid #f68b1f;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(246, 139, 31, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AdminFileItem.modern:hover {
+  border-color: #ee5c30;
+  box-shadow: 0 4px 16px rgba(246, 139, 31, 0.18);
+}
+.AdminFileSearchInput {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-right: 12px;
+}
+.AdminFileSearchInput:focus {
+  border-color: #f68b1f;
+}
+.sort-btn {
+  background: #f68b1f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sort-btn:hover {
+  background: #ee5c30;
+}
+
+.AdminFileItem:hover {
+  border-color: #f68b1f;
+  box-shadow: 0 2px 8px rgba(246, 139, 31, 0.2);
+}
+
+.AdminFileItem img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.AdminFileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.AdminFileName {
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+  word-break: break-word;
+}
+
+.AdminFileSize {
+  font-size: 11px;
+  color: #666;
+}
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.document-item {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.document-item:hover {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+.document-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.file-category {
+  font-size: 11px;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.file-description {
+  font-size: 10px;
+  color: #666;
+  margin-top: 4px;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.documents-selector {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  background: #f8f9fa;
+}
+
+.selected-documents {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selected-document-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.selected-document-item:hover {
+  border-color: #007bff;
+}
+
+.remove-item-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.remove-item-btn:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}

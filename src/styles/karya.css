@@ -1,0 +1,263 @@
+
+button,
+.add-btn, .edit-btn, .delete-btn, .save-btn, .cancel-btn,
+.confirm-btn, .download-btn, .file-select-btn, .remove-btn, .detail-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:disabled,
+.add-btn:disabled, .save-btn:disabled, .confirm-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.7;
+}
+
+.btn-orange, .add-btn, .save-btn, .detail-btn, .edit-btn {
+  background: linear-gradient(135deg, #f68b1f, #ee5c30);
+  color: white;
+}
+
+.btn-orange:hover,
+.add-btn:hover, .save-btn:hover, .detail-btn:hover, .edit-btn:hover {
+  background: #ee5c30;
+  box-shadow: 0 4px 12px rgba(246, 139, 31, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-danger, .delete-btn, .remove-btn {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.btn-danger:hover,
+.delete-btn:hover, .remove-btn:hover {
+  background: linear-gradient(135deg, #c82333, #a71e2a);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-secondary, .cancel-btn, .file-select-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover,
+.cancel-btn:hover, .file-select-btn:hover {
+  background: #545b62;
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-success, .download-btn {
+  background: #28a745;
+  color: white;
+}
+
+.btn-success:hover,
+.download-btn:hover {
+  background: #1e7e34;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-blue, .confirm-btn {
+  background: #007bff;
+  color: white;
+}
+
+.btn-blue:hover,
+.confirm-btn:hover {
+  background: #0056b3;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-orange, .add-btn, .save-btn, .detail-btn {
+  background: linear-gradient(135deg, #f68b1f, #ee5c30);
+  color: white;
+}
+
+.btn-orange:hover {
+  background: #ee5c30;
+  transform: translateY(-1px);
+}
+
+.btn-danger, .delete-btn, .remove-btn {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #c82333, #a71e2a);
+  transform: translateY(-1px);
+}
+
+.btn-secondary, .cancel-btn, .file-select-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #545b62;
+}
+
+.btn-success, .download-btn {
+  background: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #1e7e34;
+}
+
+.btn-blue, .confirm-btn {
+  background: #007bff;
+  color: white;
+}
+
+.btn-blue:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+.contact-button .contact-word:hover {
+  background-color: #fff5f6;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-word {
+  background-color: #f68b1f;
+  color: white;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logout-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #333 0%, #333 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-toggle:hover {
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.product-link {
+  display: inline-block;
+  background-color: #f68b1f;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.product-link:hover {
+  background-color: #ee5c30;
+  transform: translateY(-2px);
+}
+
+.error-container button {
+  background-color: #f68b1f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.error-container button:hover {
+  background-color: #ee5c30;
+}
+
+.nav-item:focus,
+.logout-btn:focus,
+.menu-toggle:focus {
+  outline: 2px solid #f68b1f;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .product-link {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  
+  .error-container button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

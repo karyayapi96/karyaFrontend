@@ -1,0 +1,498 @@
+.AdminFileSelectorContent.modern {
+  background: #fff;
+  border-radius: 18px;
+  width: 95%;
+  max-width: 900px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(246,139,31,0.12);
+  border: 1.5px solid #f68b1f;
+}
+.AdminFileSelectorHeader.modern {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px 16px 32px;
+  border-bottom: 2px solid #f68b1f;
+  background: linear-gradient(135deg, #fff7ed, #f8f9fa);
+}
+.AdminFileSelectorBody.modern {
+  padding: 24px 32px;
+  overflow-y: auto;
+}
+.AdminFilesGrid.modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+.AdminFileItem.modern {
+  border: 1.5px solid #f68b1f;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(246,139,31,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AdminFileItem.modern:hover {
+  border-color: #ee5c30;
+  box-shadow: 0 4px 16px rgba(246,139,31,0.18);
+}
+.AdminFileSearchInput {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-right: 12px;
+}
+.AdminFileSearchInput:focus {
+  border-color: #f68b1f;
+}
+.sort-btn {
+  background: #f68b1f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sort-btn:hover {
+  background: #ee5c30;
+}
+
+.AdminSectionHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #f68b1f;
+}
+
+.AdminPanelTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.AdminPanelDescription {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  padding: 10px;
+}
+
+.AdminServiceSection {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.AdminServiceItemRowOld {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.AdminServiceItemRowOld .AdminIndex {
+  min-width: 2rem;
+  text-align: center;
+  font-weight: 600;
+  color: #f68b1f;
+  font-size: 0.875rem;
+  background: white;
+  border-radius: 50%;
+  padding: 0.25rem;
+  border: 2px solid #f68b1f;
+}
+
+.AdminServiceItemRowOld .AdminFormInput {
+  flex: 1;
+}
+
+.AdminGalleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.AdminGalleryItem {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px dashed #dee2e6;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.AdminGalleryItem:hover {
+  border-color: #f68b1f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(246, 139, 31, 0.15);
+}
+
+.AdminImageBox {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.AdminImagePreviewSquare {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.AdminImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 6px;
+}
+
+.AdminImageBox:hover .AdminImageOverlay {
+  opacity: 1;
+}
+
+.AdminEditIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.AdminEditIcon:hover {
+  transform: scale(1.2);
+}
+
+.AdminImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.AdminImagePlaceholder:hover {
+  background: rgba(246, 139, 31, 0.1);
+}
+
+.AdminPlusIcon {
+  width: 3rem;
+  height: 3rem;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.AdminImagePlaceholder:hover .AdminPlusIcon {
+  color: #f68b1f;
+}
+
+.AdminPreviewImage {
+  border: 2px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.AdminPreviewImage:hover {
+  transform: scale(1.02);
+}
+
+.AdminFormActions {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.AdminFormActions .AdminSaveBtn {
+  background: #f68b1f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-section-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.AdminLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.AdminLoadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #f68b1f;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.AdminLoading p {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .AdminPanelTitle {
+    font-size: 1.5rem;
+  }
+  
+  .AdminGalleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .AdminServiceItemRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .AdminServiceItemRow .AdminIndex {
+    align-self: flex-start;
+    min-width: auto;
+    width: 2rem;
+  }
+  
+  .AdminFormContainer {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .AdminGalleryGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .AdminPanelTitle {
+    font-size: 1.25rem;
+  }
+  
+  .AdminPlusIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media print {
+  .AdminGalleryItem,
+  .AdminFormActions,
+  .AdminImageOverlay {
+    display: none !important;
+  }
+}
+
+.AdminBannerImageOptions {
+  margin-top: 15px;
+}
+
+.AdminImageOption {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.AdminImageOption:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.AdminImageOption.AdminSelected {
+  border-color: #28a745;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.AdminSelectedImagePreview {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #e7f3ff;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.AdminMultiFieldItem {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.AdminMultiFieldItem .AdminFormInput,
+.AdminMultiFieldItem .AdminFormTextarea {
+  flex: 1;
+}
+
+.AdminPreviewImage {
+  border: 2px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.AdminPreviewImage:hover {
+  transform: scale(1.02);
+}
+
+.form-group input[type="text"] {
+  margin-bottom: 8px;
+}
+
+.form-group label {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.AdminFormSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.AdminServiceGroup {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+}
+
+.AdminServiceGroupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.AdminServiceItemRowNew {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.AdminServiceItemRowNew .AdminIndex {
+  min-width: 30px;
+  font-weight: bold;
+  color: #666;
+}
+
+.AdminModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.AdminModalContent {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.AdminModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.AdminModalHeader h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.AdminModalBody {
+  padding: 0;
+  overflow-y: auto;
+}
+
+.AdminFilesGrid .AdminFileItem:hover {
+  border-color: #f68b1f;
+  box-shadow: 0 4px 12px rgba(246, 139, 31, 0.15);
+  transform: translateY(-2px);
+}
+
+@media (prefers-contrast: high) {
+  .AdminGalleryItem {
+    border-color: #000;
+  }
+  
+  .AdminImageOverlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}

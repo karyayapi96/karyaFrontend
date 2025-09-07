@@ -1,0 +1,114 @@
+.AdminDeleteConfirmModal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.AdminDeleteConfirmModal .AdminModalHeader {
+  padding: 20px 24px;
+  background: #f8f9fa;
+  border-bottom: 2px solid #f1f3f4;
+}
+
+.AdminDeleteConfirmModal .AdminModalHeader h3 {
+  margin: 0;
+  color: #dc3545;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.AdminDeleteConfirmModal .AdminModalContent {
+  padding: 24px;
+  text-align: center;
+}
+
+.AdminWarningIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.AdminDeleteConfirmModal p {
+  margin: 0 0 16px 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.AdminDocumentDescription {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+  font-style: italic;
+  color: #6c757d !important;
+  border-left: 4px solid #dee2e6;
+}
+
+.AdminWarningText {
+  color: #dc3545 !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.AdminDeleteConfirmModal .AdminModalActions {
+  padding: 20px 24px;
+  background: #f8f9fa;
+  border-top: 2px solid #f1f3f4;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.AdminDeleteConfirmModal .AdminCancelBtn,
+.AdminDeleteConfirmModal .AdminDeleteBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.AdminDeleteConfirmModal .AdminCancelBtn {
+  background: #6c757d;
+  color: white;
+}
+
+.AdminDeleteConfirmModal .AdminCancelBtn:hover {
+  background: #5a6268;
+}
+
+.AdminDeleteConfirmModal .AdminDeleteBtn {
+  background: #dc3545;
+  color: white;
+}
+
+.AdminDeleteConfirmModal .AdminDeleteBtn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .AdminDeleteConfirmModal {
+    margin: 20px;
+    max-width: calc(100% - 40px);
+  }
+
+  .AdminDeleteConfirmModal .AdminModalContent {
+    padding: 20px;
+  }
+
+  .AdminDeleteConfirmModal .AdminModalActions {
+    flex-direction: column;
+    padding: 16px 20px;
+  }
+
+  .AdminDeleteConfirmModal .AdminCancelBtn,
+  .AdminDeleteConfirmModal .AdminDeleteBtn {
+    width: 100%;
+  }
+}

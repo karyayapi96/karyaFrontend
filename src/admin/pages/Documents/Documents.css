@@ -1,0 +1,359 @@
+.AdminDocumentsPage {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.AdminDocumentsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.AdminDocumentsHeader h1 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.AdminFiltersSection {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.AdminSearchBar {
+  flex: 1;
+  min-width: 300px;
+}
+
+.AdminSearchInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.AdminSearchInput:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.AdminFilterControls {
+  display: flex;
+  gap: 15px;
+}
+
+.AdminFilterSelect {
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.AdminFilterSelect:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.AdminDocumentsTableContainer {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.AdminDocumentsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.AdminDocumentsTable th {
+  background: #f8f9fa;
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.AdminDocumentsTable td {
+  padding: 16px;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: top;
+}
+
+.AdminDocumentsTable tr:hover {
+  background-color: #f8f9fa;
+}
+
+.AdminDocumentPreview {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid #dee2e6;
+  position: relative;
+}
+
+.AdminPreviewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.AdminNoPreview {
+  font-size: 24px;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.AdminDocumentInfo {
+  min-width: 200px;
+}
+
+.AdminDocumentName {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.AdminDocumentDescription {
+  color: #6c757d;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.AdminCategoryBadge {
+  background: #e9ecef;
+  color: #495057;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.AdminStatusBadge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.AdminStatusBadge.AdminActive {
+  background: #d4edda;
+  color: #155724;
+}
+
+.AdminStatusBadge.AdminInactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.AdminFileTypeBadge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.AdminFileTypeBadge.AdminDocument {
+  background: #cce5ff;
+  color: #0056b3;
+}
+
+.AdminFileTypeBadge.AdminFile {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.AdminActionButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.AdminActionBtn {
+  background: none;
+  border: 2px solid transparent;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+}
+
+.AdminActionBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.AdminDetailBtn:hover {
+  background: #e3f2fd;
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.AdminPaginationControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.AdminPaginationInfo {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.AdminPaginationButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.AdminPaginationBtn {
+  padding: 8px 16px;
+  border: 2px solid #dee2e6;
+  background: white;
+  color: #495057;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.AdminPaginationBtn:hover:not(:disabled) {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.AdminPaginationBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.AdminPageSizeSelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.AdminPageSizeSelector select {
+  padding: 6px 12px;
+  border: 2px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.AdminNoData {
+  text-align: center;
+  padding: 40px;
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.AdminLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #6c757d;
+}
+@media (max-width: 768px) {
+  .AdminDocumentsPage {
+    padding: 10px;
+  }
+
+  .AdminDocumentsHeader {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .AdminDocumentsHeader h1 {
+    text-align: center;
+  }
+
+  .AdminFiltersSection {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .AdminSearchBar {
+    min-width: unset;
+  }
+
+  .AdminFilterControls {
+    flex-direction: column;
+  }
+
+  .AdminDocumentsTableContainer {
+    overflow-x: auto;
+  }
+
+  .AdminDocumentsTable {
+    min-width: 700px;
+  }
+
+  .AdminPaginationControls {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .AdminPaginationButtons {
+    justify-content: center;
+  }
+}

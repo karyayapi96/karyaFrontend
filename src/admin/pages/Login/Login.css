@@ -1,0 +1,171 @@
+#login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fad961;
+  background-image: linear-gradient(90deg, #232526 0%, #414345 100%);
+}
+
+.notice {
+  font-size: 13px;
+  text-align: center;
+  color: #666;
+}
+.login {
+  width: 30%;
+  background: #fff;
+  padding: 70px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  width: 80px;
+  height: 50px;
+}
+
+.login-title {
+  text-align: right;
+  font-weight: 700;
+  color: #f68b1f;
+  align-items: end;
+  justify-content: center;
+  display: flex;
+}
+.login-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 20px;
+}
+.form-login {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+.form-login label {
+  text-align: left;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: block;
+  color: #666;
+}
+.input-username,
+.input-password {
+  width: 100%;
+  background: #ededed;
+  border-radius: 25px;
+  margin: 4px 0 10px 0;
+  padding: 10px;
+  display: flex;
+}
+.icon {
+  padding: 4px;
+  color: #666;
+  min-width: 30px;
+  text-align: center;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 4px 0;
+  outline: none;
+}
+button[type="submit"] {
+  width: 100%;
+  border: 0;
+  border-radius: 20px;
+  padding: 14px;
+  background: #343a40;
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: ease all 0.3s;
+}
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+.background {
+  width: 70%;
+  padding: 40px;
+  height: 100vh;
+  background-color: #fad961;
+  background-image: linear-gradient(90deg, #232526 0%, #414345 100%);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  align-content: center;
+  flex-direction: row;
+}
+
+.background p {
+  max-width: 650px;
+  color: #1a1a1a;
+  font-size: 15px;
+  text-align: right;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+@media screen and (max-width: 550px) {
+  .login {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .background {
+    width: 10%;
+  }
+
+  .form-login label {
+    font-size: 8px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 12px;
+  }
+
+  .login-title {
+    font-size: 12px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 920px) {
+  .login {
+    width: 60%;
+    padding: 30px;
+  }
+
+  .background {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 921px) {
+  .login {
+    width: 30%;
+    padding: 30px;
+  }
+
+  .background {
+    width: 70%;
+  }
+}

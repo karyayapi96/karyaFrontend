@@ -1,0 +1,165 @@
+.asil-nun-x-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  background-color: #ffffff;
+  flex-direction: row;
+}
+
+.asil-nun-x-content {
+  display: flex;
+  width: 83%;
+  justify-content: space-between;
+}
+
+.asil-nun-x-text {
+  flex: 1;
+  max-width: 600px;
+  color: #333;
+  text-align: left;
+}
+
+.asil-nun-x-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #e67e22;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.asil-nun-x-description,
+.asil-nun-x-details,
+.asil-nun-x-info {
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.asil-nun-x-documents {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.asil-nun-x-documents img {
+  width: 150px;
+  height: 90px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.asil-nun-x-contact {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.asil-nun-x-contact span {
+  text-decoration: underline;
+}
+
+.asil-nun-x-image {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: auto;
+  position: relative;
+}
+
+.asil-nun-x-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .asil-nun-x-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .asil-nun-x-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .asil-nun-x-text {
+    text-align: left;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .asil-nun-x-title {
+    font-size: 24px;
+  }
+
+  .asil-nun-x-description,
+  .asil-nun-x-details,
+  .asil-nun-x-info {
+    font-size: 14px;
+  }
+
+  .asil-nun-x-documents {
+    flex-direction: row;
+    gap: 10px;
+    align-items: CENTER;
+  }
+
+  .asil-nun-x-documents img {
+    width: 80px;
+    height: 60px;
+  }
+  .asil-nun-x-image {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+
+  .asil-nun-x-image img {
+    max-width: 100%;
+  }
+
+  .asil-nun-x-contact {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+  .asil-nun-x-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .asil-nun-x-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .asil-nun-x-text {
+    text-align: left;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .asil-nun-x-image {
+    width: 300px;
+    display: none;
+  }
+
+  .asil-nun-x-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+  }
+}
